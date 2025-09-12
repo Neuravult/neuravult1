@@ -1,0 +1,4783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuravult - AI Tools Directory | Discover, Compare & Build AI Solutions</title>
+    <meta name="description" content="Neuravult offers the most comprehensive directory of AI tools, custom AI development services, and learning resources. Compare tools, build custom AI solutions, and learn AI development.">
+    <meta name="keywords" content="AI tools, artificial intelligence, machine learning, compare AI tools, build AI, AI courses, custom AI development">
+    <meta name="author" content="Neuravult">
+    <meta property="og:title" content="Neuravult - AI Tools Directory">
+    <meta property="og:description" content="Discover, compare, and build AI tools with Neuravult's comprehensive directory and development services.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* All existing CSS remains intact */
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --secondary: #10b981;
+            --secondary-dark: #0da271;
+            --accent: #f59e0b;
+            --danger: #ef4444;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --info: #3b82f6;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #f9fafb;
+            --bg-card: #ffffff;
+            --bg-light: #f3f4f6;
+            --border: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 12px;
+            --radius-lg: 16px;
+            --transition: all 0.3s ease;
+            --transition-slow: all 0.5s ease;
+            --header-height: 70px;
+            --premium: linear-gradient(135deg, #f59e0b, #ef4444, #6366f1);
+            --navbar-scroll-height: 60px;
+        }
+
+        .dark-mode {
+            --primary: #818cf8;
+            --primary-dark: #6366f1;
+            --primary-light: #a5b4fc;
+            --secondary: #34d399;
+            --secondary-dark: #10b981;
+            --accent: #fbbf24;
+            --text: #f3f4f6;
+            --text-light: #d1d5db;
+            --bg: #111827;
+            --bg-card: #1f2937;
+            --bg-light: #374151;
+            --border: #374151;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            transition: var(--transition);
+            overflow-x: hidden;
+            padding-top: var(--header-height);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary-dark);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-danger {
+            background-color: var(--danger);
+        }
+
+        .btn-danger:hover {
+            background-color: #dc2626;
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        .btn-lg {
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+        }
+
+        .btn-premium {
+            background: var(--premium);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-premium:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+            z-index: -1;
+            transition: var(--transition);
+        }
+
+        .btn-premium:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+            height: var(--header-height);
+            transition: var(--transition);
+            transform: translateY(0);
+        }
+
+        header.hidden {
+            transform: translateY(-100%);
+        }
+
+        .header-scrolled {
+            padding: 0.5rem 0;
+            box-shadow: var(--shadow-lg);
+            height: var(--navbar-scroll-height);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text);
+            font-weight: 500;
+            position: relative;
+        }
+
+        nav a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        nav a:hover:after, nav a.active:after {
+            width: 100%;
+        }
+
+        nav a.active {
+            color: var(--primary);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+            font-size: 1.2rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--bg-light);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            background-color: var(--bg-light);
+        }
+
+        .user-menu {
+            position: relative;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .user-avatar:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow);
+        }
+
+        .user-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            padding: 0.5rem;
+            min-width: 200px;
+            margin-top: 0.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            z-index: 100;
+        }
+
+        .user-dropdown.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .user-dropdown a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            color: var(--text);
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .user-dropdown a:hover {
+            background-color: var(--bg-light);
+            color: var(--primary);
+        }
+
+        .user-dropdown a i {
+            width: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            border-radius: 0 0 var(--radius) var(--radius);
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .search-bar {
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+            margin-bottom: 2rem;
+            display: flex;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            border: none;
+            font-size: 1rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .search-bar button:hover {
+            background: var(--primary-dark);
+            transform: rotate(10deg);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .hero-stats span {
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            font-weight: 500;
+        }
+
+        /* Categories Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 3px;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .category-card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .category-card:hover:before {
+            opacity: 1;
+        }
+
+        .category-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            transition: var(--transition);
+        }
+
+        .category-card:hover i {
+            transform: scale(1.1);
+        }
+
+        /* Tools Section */
+        .filters {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .filter-toggle {
+            background: none;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filter-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+            position: relative;
+        }
+
+        .filter-group h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .filter-options select, .filter-options input {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            background-color: var(--bg);
+            color: var(--text);
+            transition: var(--transition);
+            appearance: none;
+        }
+
+        .filter-options select:focus, .filter-options input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+
+        .filter-group:after {
+            content: '\f078';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+            color: var(--text-light);
+            pointer-events: none;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .tool-card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .tool-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--radius);
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .tool-image {
+            height: 160px;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-image:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0,0,0,0.2), transparent);
+        }
+
+        .tool-content {
+            padding: 1.5rem;
+        }
+
+        .tool-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tool-favorite {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .tool-favorite:hover, .tool-favorite.active {
+            color: var(--danger);
+        }
+
+        .tool-description {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .tool-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            align-items: center;
+        }
+
+        .tool-price {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .tool-rating {
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .tool-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tool-tag {
+            background-color: var(--bg-light);
+            color: var(--text);
+            padding: 0.25rem 0.5rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 5;
+        }
+
+        .pagination-item {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius);
+            background-color: var(--bg-card);
+            color: var(--text);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .pagination-item:hover, .pagination-item.active {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bg-card);
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-column a {
+            color: var(--text-light);
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .footer-column a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: var(--bg);
+            color: var(--text);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 1rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius) 0 0 var(--radius);
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        .newsletter-form button {
+            padding: 0 1rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            cursor: pointer;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background-color: var(--bg-card);
+            border-radius: var(--radius-lg);
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(20px);
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active .modal {
+            transform: translateY(0);
+        }
+
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background-color: var(--bg-card);
+            z-index: 10;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            color: var(--danger);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .modal-footer {
+            padding: 1.5rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            position: sticky;
+            bottom: 0;
+            background-color: var(--bg-card);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background-color: var(--bg);
+            color: var(--text);
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-divider {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .form-divider .form-group {
+            flex: 1;
+        }
+
+        .form-error {
+            color: var(--danger);
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        /* Tool Detail Page */
+        .tool-detail-header {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .tool-detail-image {
+            flex: 0 0 300px;
+            height: 200px;
+            border-radius: var(--radius);
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+
+        .tool-detail-info {
+            flex: 1;
+        }
+
+        .tool-detail-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tool-detail-meta span {
+            padding: 0.5rem 1rem;
+            background-color: var(--bg-light);
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+
+        .tool-detail-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tool-detail-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .tool-detail-section {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .feature-list li:before {
+            content: '✓';
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .pricing-plan {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .pricing-plan:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pricing-plan-header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-plan-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .review-item {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+        }
+
+        .review-item:last-child {
+            border-bottom: none;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .review-author {
+            font-weight: 600;
+            position: relative;
+            z-index: 5;
+        }
+
+        .review-rating {
+            color: var(--accent);
+        }
+
+        /* Dashboard */
+        .dashboard {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+        }
+
+        .dashboard-sidebar {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            height: fit-content;
+        }
+
+        .dashboard-menu {
+            list-style: none;
+        }
+
+        .dashboard-menu li {
+            margin-bottom: 0.5rem;
+        }
+
+        .dashboard-menu a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            color: var(--text);
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .dashboard-menu a:hover, .dashboard-menu a.active {
+            background-color: var(--bg-light);
+            color: var(--primary);
+            position: relative;
+            z-index: 5;
+        }
+
+        .dashboard-menu a i {
+            width: 20px;
+        }
+
+        .dashboard-content {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+        }
+
+        .stat-card {
+            background-color: var(--bg);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-card i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .stat-card-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* AI Assistant */
+        .ai-assistant {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+        }
+
+        .ai-assistant-toggle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            box-shadow: var(--shadow-lg);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .ai-assistant-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .ai-assistant-chat {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            width: 350px;
+            height: 400px;
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: var(--transition);
+        }
+
+        .ai-assistant-chat.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .ai-chat-header {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ai-chat-body {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .ai-chat-footer {
+            padding: 1rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .ai-chat-input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        .ai-chat-send {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            width: 40px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .ai-chat-send:hover {
+            background: var(--primary-dark);
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            display: flex;
+        }
+
+        .message.ai {
+            justify-content: flex-start;
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .message-content {
+            max-width: 80%;
+            padding: 0.75rem;
+            border-radius: var(--radius);
+        }
+
+        .message.ai .message-content {
+            background-color: var(--bg-light);
+        }
+
+        .message.user .message-content {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Loading Animation */
+        .loader {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+        }
+
+        .loader:after {
+            content: " ";
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border-radius: 50%;
+            border: 6px solid var(--primary);
+            border-color: var(--primary) transparent var(--primary) transparent;
+            animation: loader 1.2s linear infinite;
+        }
+
+        @keyframes loader {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-in {
+            animation: slideIn 0.5s ease forwards;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        .bounce-in {
+            animation: bounceIn 0.6s ease forwards;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Toast Notifications */
+        .toast-container {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 2000;
+        }
+
+        .toast {
+            background-color: var(--bg-card);
+            color: var(--text);
+            padding: 1rem;
+            border-radius: var(--radius);
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            max-width: 350px;
+            transform: translateX(100%);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .toast.success {
+            border-left: 4px solid var(--success);
+        }
+
+        .toast.error {
+            border-left: 4px solid var(--danger);
+        }
+
+        .toast.warning {
+            border-left: 4px solid var(--warning);
+        }
+
+        .toast.info {
+            border-left: 4px solid var(--info);
+        }
+
+        .toast-close {
+            margin-left: auto;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        /* NEW STYLES FOR ADDED FEATURES */
+
+        /* Premium Section */
+        .premium-section {
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            color: white;
+            padding: 4rem 0;
+            border-radius: var(--radius);
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .premium-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23f59e0b' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .premium-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .premium-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .premium-feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: var(--radius);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        .premium-feature:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .premium-feature i {
+            font-size: 2.5rem;
+            color: #f59e0b;
+            margin-bottom: 1rem;
+        }
+
+        /* Courses Section */
+        .courses-section {
+            margin: 4rem 0;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .course-card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .course-image {
+            height: 180px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .course-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            min-height: 250px;
+        }
+
+        .course-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .course-description {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            flex-grow: 1;
+        }
+
+        /* Build AI Tools Section */
+        .build-ai-section {
+            background-color: var(--bg-light);
+            padding: 4rem 0;
+            border-radius: var(--radius);
+            margin: 4rem 0;
+        }
+
+        .build-ai-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .build-ai-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .build-ai-feature {
+            background-color: var(--bg-card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .build-ai-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .build-ai-feature i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            margin: 4rem 0;
+        }
+
+        .testimonials-container {
+            position: relative;
+        }
+
+        .testimonials-slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            margin-bottom: 2rem;
+        }
+
+        .testimonials-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .testimonial {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-right: 2rem;
+        }
+
+        .testimonial-content {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .testimonial-content:before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--primary-light);
+            position: absolute;
+            top: -1rem;
+            left: -1rem;
+            opacity: 0.3;
+            line-height: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+
+        .testimonial-info h4 {
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .testimonial-rating {
+            color: var(--accent);
+            margin-top: 0.5rem;
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            position: relative;
+            z-index: 5;
+        }
+
+        .testimonial-nav button {
+            background: var(--bg-light);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .testimonial-nav button:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Affiliate Tracking */
+        .affiliate-section {
+            background-color: var(--bg-light);
+            padding: 3rem;
+            border-radius: var(--radius);
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .affiliate-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .affiliate-stat {
+            text-align: center;
+        }
+
+        .affiliate-stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .affiliate-stat-label {
+            color: var(--text-light);
+        }
+
+        /* Branding Elements */
+        .brand-elements {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .brand-element {
+            text-align: center;
+            max-width: 200px;
+            transition: var(--transition);
+        }
+
+        .brand-element:hover {
+            transform: translateY(-5px);
+        }
+
+        .brand-element i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* WhatsApp Integration */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Enhanced Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px rgba(99, 102, 241, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.8); }
+            100% { box-shadow: 0 0 5px rgba(99, 102, 241, 0.5); }
+        }
+
+        .glow-animation {
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        /* SEO Elements */
+        .schema-markup {
+            display: none;
+        }
+
+        /* User Profile Styles */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            background-color: var(--bg-card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .profile-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .profile-stat {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--bg-light);
+            border-radius: var(--radius);
+            min-width: 100px;
+        }
+
+        .profile-stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .profile-stat-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .profile-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+        }
+
+        .profile-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* Tool Comparison */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .comparison-table th {
+            background-color: var(--bg-light);
+            font-weight: 600;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-feature {
+            font-weight: 500;
+        }
+
+        .comparison-value {
+            text-align: center;
+        }
+
+        .comparison-value.yes {
+            color: var(--success);
+        }
+
+        .comparison-value.no {
+            color: var(--danger);
+        }
+
+        /* Blog/Article Styles */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .article-card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .article-image {
+            height: 180px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            position: relative;
+        }
+
+        .article-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--radius);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .article-content {
+            padding: 1.5rem;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            flex-wrap: wrap;
+        }
+
+        .article-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-excerpt {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        /* Resource Library */
+        .resources-filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .resource-filter {
+            padding: 0.5rem 1rem;
+            background-color: var(--bg-card);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .resource-filter.active {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .resource-card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .resource-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Tool Detail Redirect Overlay */
+        .tool-redirect-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .tool-redirect-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .tool-redirect-modal {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 2rem;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .tool-redirect-modal h3 {
+            margin-bottom: 1rem;
+        }
+
+        .tool-redirect-modal p {
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+
+        .tool-redirect-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        /* Dashboard Pages */
+        .dashboard-page {
+            display: none;
+        }
+
+        .dashboard-page.active {
+            display: block;
+        }
+
+        /* Dashboard Tables */
+        .dashboard-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background-color: var(--bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .dashboard-table th, .dashboard-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .dashboard-table th {
+            background-color: var(--bg-light);
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+        }
+
+        .dashboard-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .table-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        /* Form Styles */
+        .form-card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .form-title {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* New Sections */
+        .create-ai-section {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+            color: white;
+            padding: 4rem 0;
+            border-radius: var(--radius);
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .ai-courses-section {
+            background-color: var(--bg-light);
+            padding: 4rem 0;
+            border-radius: var(--radius);
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .view-more-section {
+            padding: 3rem 0;
+            text-align: center;
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            margin: 3rem 0;
+        }
+
+        .view-more-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            position: relative;
+            z-index: 5;
+        }
+
+        .view-more-card {
+            background-color: var(--bg);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .view-more-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .view-more-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Auth Pages */
+        .auth-container {
+            min-height: calc(100vh - var(--header-height));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+        }
+
+        .auth-card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+            max-width: 450px;
+            padding: 2rem;
+        }
+
+        .auth-tabs {
+            display: flex;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .auth-tab {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+        }
+
+        .auth-tab.active {
+            border-bottom: 3px solid var(--primary);
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--bg-card);
+            z-index: 999;
+            padding: 2rem;
+            transform: translateX(-100%);
+            transition: var(--transition);
+            overflow-y: auto;
+        }
+
+        .mobile-nav.show {
+            transform: translateX(0);
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+        }
+
+        .mobile-nav li {
+            margin-bottom: 1rem;
+        }
+
+        .mobile-nav a {
+            display: block;
+            padding: 1rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .mobile-nav a:hover, .mobile-nav a.active {
+            background-color: var(--bg-light);
+            color: var(--primary);
+        }
+
+        .mobile-auth-actions {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* Page Transitions */
+        .page {
+            display: none;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* NEW: Advanced Navigation Features */
+        .nav-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--primary);
+            z-index: 1001;
+            transition: width 0.3s ease;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* NEW: Advanced Page Animations */
+        .page-transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary);
+            z-index: 9999;
+            transform: translateY(100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-transition.active {
+            animation: pageTransition 0.8s ease forwards;
+        }
+
+        @keyframes pageTransition {
+            0% { transform: translateY(100%); }
+            50% { transform: translateY(0); }
+            100% { transform: translateY(-100%); }
+        }
+
+        /* NEW: Performance Optimizations */
+        .lazy-load {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .lazy-load.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* NEW: Advanced Dashboard Components */
+        .analytics-chart {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            height: 300px;
+            position: relative;
+        }
+
+        .data-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .data-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* NEW: Automation Tools Section */
+        .automation-section {
+            padding: 4rem 0;
+            background: var(--bg-light);
+            border-radius: var(--radius);
+            margin: 4rem 0;
+        }
+
+        .automation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .automation-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .automation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .automation-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* NEW: Advanced Search Components */
+        .advanced-search {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow);
+        }
+
+        .search-filters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        /* NEW: Market Growth Components */
+        .market-growth {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .growth-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .growth-stat {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .growth-stat:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* NEW: Subpage Navigation */
+        .subpage-nav {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+        }
+
+        .subpage-nav a {
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            white-space: nowrap;
+            transition: var(--transition);
+        }
+
+        .subpage-nav a.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .tool-detail-header {
+                flex-direction: column;
+            }
+
+            .tool-detail-image {
+                flex: none;
+                width: 100%;
+            }
+
+            .tool-detail-content {
+                grid-template-columns: 1fr;
+            }
+
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+
+            .dashboard-sidebar {
+                order: 2;
+            }
+
+            .dashboard-content {
+                order: 1;
+            }
+
+            .profile-content {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-stats {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 900px) {
+            nav ul {
+                gap: 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .filter-options {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .tools-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+
+            .header-actions .btn:not(.mobile-auth-btn) {
+                display: none;
+            }
+
+            .user-menu {
+                display: none;
+            }
+
+            .ai-assistant-chat {
+                width: 300px;
+            }
+
+            .premium-features {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial {
+                flex: 0 0 85%;
+            }
+
+            .whatsapp-float {
+                bottom: 1rem;
+                left: 1rem;
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .ai-chat-footer {
+                flex-direction: column;
+            }
+
+            .ai-chat-send {
+                width: 100%;
+                padding: 0.75rem;
+            }
+
+            .build-ai-features {
+                grid-template-columns: 1fr;
+            }
+
+            .view-more-cards {
+                grid-template-columns: 1fr;
+            }
+
+            /* NEW: Responsive additions */
+            .growth-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .automation-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 0.6rem 1.2rem;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tool-detail-actions {
+                flex-direction: column;
+            }
+
+            .ai-assistant {
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .ai-assistant-chat {
+                width: calc(100vw - 2rem);
+                right: 0;
+            }
+
+            .affiliate-stats {
+                gap: 1.5rem;
+            }
+
+            .affiliate-stat-value {
+                font-size: 2rem;
+            }
+
+            .tool-redirect-modal {
+                margin: 1rem;
+            }
+
+            .tool-redirect-actions {
+                flex-direction: column;
+            }
+
+            .article-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .auth-card {
+                padding: 1.5rem;
+            }
+
+            .auth-tabs {
+                flex-direction: column;
+            }
+
+            .auth-tab {
+                text-align: center;
+            }
+
+            /* NEW: Mobile adjustments */
+            .subpage-nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Progress Bar -->
+    <div class="nav-progress"></div>
+
+    <!-- Page Transition Animation -->
+    <div class="page-transition">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo" data-page="home">
+                <i class="fas fa-brain"></i>
+                <span>Neuravult</span>
+            </a>
+            <nav>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul>
+                    <li><a href="#" class="active" data-page="home">Home</a></li>
+                    <li><a href="#" data-page="directory">Directory</a></li>
+                    <li><a href="#" data-page="categories">Categories</a></li>
+                    <li><a href="#" data-page="courses">Courses</a></li>
+                    <li><a href="#" data-page="create-ai">Create AI</a></li>
+                    <li><a href="#" data-page="compare">Compare</a></li>
+                    <li><a href="#" data-page="pricing">Pricing</a></li>
+                    <li><a href="#" data-page="premium">Premium</a></li>
+                    <li><a href="#" data-page="blog">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="user-menu">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-dropdown">
+                        <a href="#" data-page="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        <a href="#" data-page="profile"><i class="fas fa-user"></i> Profile</a>
+                        <a href="#" data-page="favorites"><i class="fas fa-heart"></i> Favorites</a>
+                        <a href="#" data-page="affiliate"><i class="fas fa-dollar-sign"></i> Affiliate Program</a>
+                        <a href="#" data-page="settings"><i class="fas fa-cog"></i> Settings</a>
+                        <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-outline mobile-auth-btn" id="login-btn" data-page="login">Login</a>
+                <a href="#" class="btn mobile-auth-btn" id="signup-btn" data-page="signup">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="#" class="active" data-page="home">Home</a></li>
+            <li><a href="#" data-page="directory">Directory</a></li>
+            <li><a href="#" data-page="categories">Categories</a></li>
+            <li><a href="#" data-page="courses">Courses</a></li>
+            <li><a href="#" data-page="create-ai">Create AI</a></li>
+            <li><a href="#" data-page="compare">Compare</a></li>
+            <li><a href="#" data-page="pricing">Pricing</a></li>
+            <li><a href="#" data-page="premium">Premium</a></li>
+            <li><a href="#" data-page="blog">Blog</a></li>
+        </ul>
+        <div class="mobile-auth-actions">
+            <a href="#" class="btn btn-outline" data-page="login">Login</a>
+            <a href="#" class="btn" data-page="signup">Sign Up</a>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Home Page -->
+        <div class="page active" id="home-page">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container hero-content animate__animated animate__fadeInUp">
+                    <h1>Discover & Compare AI Tools</h1>
+                    <p>Explore our curated directory of 1000+ AI tools to enhance your workflow and productivity</p>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search for AI tools by name, category, or use case...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="hero-stats">
+                        <span>1000+ Tools</span> •
+                        <span>50+ Categories</span> •
+                        <span>5000+ Reviews</span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container">
+                <!-- Categories Section -->
+                <section class="categories-section" id="categories">
+                    <h2 class="section-title">Browse by Category</h2>
+                    <div class="categories">
+                        <div class="category-card animate__animated animate__fadeInUp">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h3>Content Creation</h3>
+                            <p>142 tools</p>
+                        </div>
+                        <div class="category-card animate__animated animate__fadeInUp">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Marketing</h3>
+                            <p>95 tools</p>
+                        </div>
+                        <div class="category-card animate__animated animate__fadeInUp">
+                            <i class="fas fa-code"></i>
+                            <h3>Development</h3>
+                            <p>78 tools</p>
+                        </div>
+                        <div class="category-card animate__animated animate__fadeInUp">
+                            <i class="fas fa-image"></i>
+                            <h3>Image Generation</h3>
+                            <p>64 tools</p>
+                        </div>
+                        <div class="category-card animate__animated animate__fadeInUp">
+                            <i class="fas fa-video"></i>
+                            <h3>Video Editing</h3>
+                            <p>48 tools</p>
+                        </div>
+                        <div class="category-card animate__animated animate__fadeInUp">
+                            <i class="fas fa-robot"></i>
+                            <h3>Chatbots</h3>
+                            <p>52 tools</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tools Section -->
+                <section class="tools-section" id="directory">
+                    <h2 class="section-title">Popular AI Tools</h2>
+                    <div class="filters">
+                        <div class="filter-header">
+                            <h3>Filter Tools</h3>
+                            <button class="filter-toggle">
+                                <i class="fas fa-sliders-h"></i> Advanced Filters
+                            </button>
+                        </div>
+                        <div class="filter-options">
+                            <div class="filter-group">
+                                <h4>Profession</h4>
+                                <select>
+                                    <option>All Professions</option>
+                                    <option>Developer</option>
+                                    <option>Marketer</option>
+                                    <option>Designer</option>
+                                    <option>Writer</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <h4>Pricing</h4>
+                                <select>
+                                    <option>Any Pricing</option>
+                                    <option>Free</option>
+                                    <option>Freemium</option>
+                                    <option>Paid</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <h4>Category</h4>
+                                <select>
+                                    <option>All Categories</option>
+                                    <option>Content Creation</option>
+                                    <option>Image Generation</option>
+                                    <option>Code Assistance</option>
+                                    <option>Video Editing</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <h4>Sort By</h4>
+                                <select>
+                                    <option>Most Popular</option>
+                                    <option>Highest Rated</option>
+                                    <option>Newest</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tools-grid">
+                        <!-- Tool cards will be dynamically generated -->
+                    </div>
+                    <div class="pagination">
+                        <a href="#" class="pagination-item active">1</a>
+                        <a href="#" class="pagination-item">2</a>
+                        <a href="#" class="pagination-item">3</a>
+                        <a href="#" class="pagination-item">4</a>
+                        <a href="#" class="pagination-item">5</a>
+                    </div>
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <a href="https://neuravult-1.vercel.app/" class="btn" target="_blank" id="view-more-tools">View More Tools</a>
+                    </div>
+                </section>
+
+                <!-- Build AI Tools Section -->
+                <section class="build-ai-section" id="build-ai">
+                    <div class="build-ai-content">
+                        <h2 class="section-title">Build AI Tools & Courses</h2>
+                        <p>Learn to build your own AI tools with our comprehensive courses and resources. Master AI development from beginner to advanced levels.</p>
+                        <div class="build-ai-features">
+                            <div class="build-ai-feature animate__animated animate__fadeInUp">
+                                <i class="fas fa-code"></i>
+                                <h3>Hands-On Coding</h3>
+                                <p>Practical exercises and real-world projects to build your skills</p>
+                            </div>
+                            <div class="build-ai-feature animate__animated animate__fadeInUp">
+                                <i class="fas fa-graduation-cap"></i>
+                                <h3>Expert Instructors</h3>
+                                <p>Learn from industry professionals with years of experience</p>
+                            </div>
+                            <div class="build-ai-feature animate__animated animate__fadeInUp">
+                                <i class="fas fa-briefcase"></i>
+                                <h3>Career Focused</h3>
+                                <p>Curriculum designed to prepare you for AI development roles</p>
+                            </div>
+                        </div>
+                        <a href="https://neuravult-oibd.vercel.app/" class="btn btn-lg" target="_blank">Explore AI Courses</a>
+                    </div>
+                </section>
+
+                <!-- Courses Section -->
+                <section class="courses-section" id="courses">
+                    <h2 class="section-title">Featured AI Courses</h2>
+                    <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Expand your knowledge with our carefully selected AI courses from top platforms</p>
+                    <div class="courses-grid">
+                        <div class="course-card animate__animated animate__fadeInUp">
+                            <div class="course-image">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">AI Development Fundamentals</h3>
+                                <p class="course-description">Learn the basics of AI development and how to build your first AI model from scratch.</p>
+                                <a href="https://neuravult-oibd.vercel.app/" class="btn btn-outline" target="_blank">Enroll Now</a>
+                            </div>
+                        </div>
+                        <div class="course-card animate__animated animate__fadeInUp">
+                            <div class="course-image">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">Advanced ML Algorithms</h3>
+                                <p class="course-description">Dive deep into machine learning algorithms and advanced AI techniques.</p>
+                                <a href="https://neuravult-oibd.vercel.app/" class="btn btn-outline" target="_blank">Enroll Now</a>
+                            </div>
+                        </div>
+                        <div class="course-card animate__animated animate__fadeInUp">
+                            <div class="course-image">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">AI Product Management</h3>
+                                <p class="course-description">Learn how to manage AI projects and bring AI products to market successfully.</p>
+                                <a href="https://neuravult-oibd.vercel.app/" class="btn btn-outline" target="_blank">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <a href="https://neuravult-oibd.vercel.app/" class="btn" target="_blank" id="view-all-courses">View All Courses</a>
+                    </div>
+                </section>
+
+                <!-- Create Your AI Tools Section -->
+                <section class="create-ai-section">
+                    <div class="container">
+                        <h2 class="section-title">Create Your Own AI Tools</h2>
+                        <p>Build custom AI solutions with our powerful platform. No coding experience required.</p>
+                        <div class="build-ai-features">
+                            <div class="build-ai-feature animate__animated animate__fadeInUp">
+                                <i class="fas fa-wand-magic-sparkles"></i>
+                                <h3>Drag & Drop Interface</h3>
+                                <p>Create AI workflows visually with our intuitive drag and drop editor</p>
+                            </div>
+                            <div class="build-ai-feature animate__animated animate__fadeInUp">
+                                <i class="fas fa-bolt"></i>
+                                <h3>Pre-built Templates</h3>
+                                <p>Get started quickly with our library of pre-built AI templates</p>
+                            </div>
+                            <div class="build-ai-feature animate__animated animate__fadeInUp">
+                                <i class="fas fa-cloud"></i>
+                                <h3>Cloud Deployment</h3>
+                                <p>Deploy your AI tools to the cloud with a single click</p>
+                            </div>
+                        </div>
+                        <a href="https://neuravult-oibd.vercel.app/" class="btn btn-lg btn-premium" target="_blank">Start Creating Now</a>
+                    </div>
+                </section>
+
+                <!-- AI Courses Section -->
+                <section class="ai-courses-section">
+                    <div class="container">
+                        <h2 class="section-title">Comprehensive AI Courses</h2>
+                        <p>Learn from industry experts and master AI development with our structured learning paths</p>
+                        <div class="courses-grid">
+                            <div class="course-card animate__animated animate__fadeInUp">
+                                <div class="course-image">
+                                <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="course-content">
+                                    <h3 class="course-title">Machine Learning Fundamentals</h3>
+                                    <p class="course-description">Understand the core concepts of machine learning and how to implement algorithms from scratch.</p>
+                                    <a href="https://neuravult-oibd.vercel.app/" class="btn btn-outline" target="_blank">Start Learning</a>
+                                </div>
+                            </div>
+                            <div class="course-card animate__animated animate__fadeInUp">
+                                <div class="course-image">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <div class="course-content">
+                                    <h3 class="course-title">Deep Learning Specialization</h3>
+                                    <p class="course-description">Master neural networks, CNNs, RNNs, and transformers with hands-on projects.</p>
+                                    <a href="https://neuravult-oibd.vercel.app/" class="btn btn-outline" target="_blank">Start Learning</a>
+                                </div>
+                            </div>
+                            <div class="course-card animate__animated animate__fadeInUp">
+                                <div class="course-image">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="course-content">
+                                    <h3 class="course-title">AI Product Development</h3>
+                                    <p class="course-description">Learn how to design, build, and deploy AI products from concept to production.</p>
+                                    <a href="https://neuravult-oibd.vercel.app/" class="btn btn-outline" target="_blank">Start Learning</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="text-align: center; margin-top: 2rem;">
+                            <a href="https://neuravult-oibd.vercel.app/" class="btn btn-lg" target="_blank">Explore All Courses</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- View More Section -->
+                <section class="view-more-section">
+                    <div class="container">
+                        <h2 class="section-title">Explore More Resources</h2>
+                        <p>Discover additional tools, courses, and resources to enhance your AI journey</p>
+                        <div class="view-more-cards">
+                            <div class="view-more-card">
+                                <i class="fas fa-tools"></i>
+                                <h3>AI Tools Directory</h3>
+                                <p>Browse our comprehensive collection of AI tools across various categories and use cases.</p>
+                                <a href="https://neuravult-1.vercel.app/" class="btn" target="_blank">View Tools</a>
+                            </div>
+                            <div class="view-more-card">
+                                <i class="fas fa-graduation-cap"></i>
+                                <h3>Learning Paths</h3>
+                                <p>Structured learning paths to guide you from beginner to advanced AI practitioner.</p>
+                                <a href="https://neuravult-oibd.vercel.app/" class="btn" target="_blank">View Courses</a>
+                            </div>
+                            <div class="view-more-card">
+                                <i class="fas fa-book"></i>
+                                <h3>Resource Library</h3>
+                                <p>Access tutorials, guides, and documentation to support your AI development journey.</p>
+                                <a href="https://neuravult-1.vercel.app/" class="btn" target="_blank">Explore Resources</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Premium Section -->
+                <section class="premium-section" id="premium">
+                    <div class="premium-content">
+                        <h2>Premium Custom AI Solutions</h2>
+                        <p>Get custom AI tools and courses tailored to your specific needs</p>
+                        <div class="premium-features">
+                            <div class="premium-feature">
+                                <i class="fas fa-tools"></i>
+                                <h3>Custom AI Tools</h3>
+                                <p>We develop bespoke AI solutions tailored to your business requirements</p>
+                            </div>
+                            <div class="premium-feature">
+                                <i class="fas fa-graduation-cap"></i>
+                                <h3>Personalized Courses</h3>
+                                <p>Get AI learning paths designed specifically for your team's needs</p>
+                            </div>
+                            <div class="premium-feature">
+                                <i class="fas fa-headset"></i>
+                                <h3>Dedicated Support</h3>
+                                <p>24/7 premium support and consultation for all your AI needs</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/2349161806424?text=Hello!%20I'm%20interested%20in%20Neuravult%20Premium%20services" class="btn btn-premium" target="_blank" id="premium-contact">
+                            <i class="fab fa-whatsapp"></i> Contact Us on WhatsApp
+                        </a>
+                        <p style="margin-top: 1rem; opacity: 0.8;">Or email us at <a href="mailto:israeldewa1@gmail.com" style="color: white; text-decoration: underline;">israeldewa1@gmail.com</a></p>
+                    </div>
+                </section>
+
+                <!-- Testimonials Section -->
+                <section class="testimonials-section">
+                    <h2 class="section-title">What Our Users Say</h2>
+                    <div class="testimonials-container">
+                        <div class="testimonials-slider">
+                            <div class="testimonial">
+                                <div class="testimonial-content">
+                                    <p>Neuravult helped me find the perfect AI tools for my content creation business. The comparison feature saved me hours of research!</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="testimonial-avatar">S</div>
+                                    <div class="testimonial-info">
+                                        <h4>Sarah Johnson</h4>
+                                        <p>Content Creator</p>
+                                        <div class="testimonial-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial">
+                                <div class="testimonial-content">
+                                    <p>The custom AI solution developed by Neuravult's team transformed our customer service. Response times improved by 70%!</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="testimonial-avatar">M</div>
+                                    <div class="testimonial-info">
+                                        <h4>Michael Chen</h4>
+                                        <p>Startup Founder</p>
+                                        <div class="testimonial-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial">
+                                <div class="testimonial-content">
+                                    <p>As a developer, I found the AI courses incredibly valuable. I went from beginner to building my own AI models in just 3 months.</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="testimonial-avatar">A</div>
+                                    <div class="testimonial-info">
+                                        <h4>Alex Rodriguez</h4>
+                                        <p>Software Developer</p>
+                                        <div class="testimonial-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-nav">
+                            <button id="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                            <button id="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Affiliate Section -->
+                <section class="affiliate-section">
+                    <h2>Join Our Affiliate Program</h2>
+                    <p>Earn commissions by referring users to Neuravult. Track your performance in real-time with our advanced affiliate dashboard.</p>
+                    <div class="affiliate-stats">
+                        <div class="affiliate-stat">
+                            <div class="affiliate-stat-value">15%</div>
+                            <div class="affiliate-stat-label">Commission Rate</div>
+                        </div>
+                        <div class="affiliate-stat">
+                            <div class="affiliate-stat-value">$25k+</div>
+                            <div class="affiliate-stat-label">Total Paid</div>
+                        </div>
+                        <div class="affiliate-stat">
+                            <div class="affiliate-stat-value">500+</div>
+                            <div class="affiliate-stat-label">Active Affiliates</div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn" style="margin-top: 2rem;">Become an Affiliate</a>
+                </section>
+
+                <!-- Compare Section -->
+                <section class="compare-section" id="compare">
+                    <h2 class="section-title">Compare AI Tools</h2>
+                    <div style="background-color: var(--bg-card); padding: 2rem; border-radius: var(--radius); text-align: center;">
+                        <i class="fas fa-balance-scale" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h3>Compare Side-by-Side</h3>
+                        <p>Select tools to compare features, pricing, and ratings</p>
+                        <a href="#" class="btn" style="margin-top: 1rem;">Start Comparing</a>
+                    </div>
+                </section>
+
+                <!-- Pricing Section -->
+                <section class="pricing-section" id="pricing">
+                    <h2 class="section-title">Pricing Plans</h2>
+                    <div style="background-color: var(--bg-card); padding: 2rem; border-radius: var(--radius); text-align: center;">
+                        <i class="fas fa-tags" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h3>Find the Right Plan</h3>
+                        <p>Compare pricing plans across different AI tools</p>
+                        <a href="#" class="btn" style="margin-top: 1rem;">View Pricing</a>
+                    </div>
+                </section>
+
+                <!-- Blog Section -->
+                <section class="blog-section" id="blog">
+                    <h2 class="section-title">AI Insights & Blog</h2>
+                    <div class="articles-grid">
+                        <div class="article-card">
+                            <div class="article-image">
+                                <i class="fas fa-newspaper"></i>
+                                <span class="article-badge">New</span>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span><i class="fas fa-calendar"></i> May 15, 2023</span>
+                                    <span><i class="fas fa-clock"></i> 5 min read</span>
+                                </div>
+                                <h3 class="article-title">The Future of AI in Content Creation</h3>
+                                <p class="article-excerpt">Explore how AI is revolutionizing content creation and what it means for creators...</p>
+                                <a href="#" class="btn btn-outline btn-sm">Read More</a>
+                            </div>
+                        </div>
+                        <div class="article-card">
+                            <div class="article-image">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span><i class="fas fa-calendar"></i> April 28, 2023</span>
+                                    <span><i class="fas fa-clock"></i> 7 min read</span>
+                                </div>
+                                <h3 class="article-title">AI Tools Comparison: Which One Is Right For You?</h3>
+                                <p class="article-excerpt">A detailed comparison of the top AI tools in the market and how to choose the right one for your needs...</p>
+                                <a href="#" class="btn btn-outline btn-sm">Read More</a>
+                            </div>
+                        </div>
+                        <div class="article-card">
+                            <div class="article-image">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span><i class="fas fa-calendar"></i> April 10, 2023</span>
+                                    <span><i class="fas fa-clock"></i> 4 min read</span>
+                                </div>
+                                <h3 class="article-title">How to Build Your First AI Tool</h3>
+                                <p class="article-excerpt">A beginner's guide to building your first AI tool from scratch with step-by-step instructions...</p>
+                                <a href="#" class="btn btn-outline btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <a href="#" class="btn">View All Articles</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Other Pages -->
+        <div class="page" id="directory-page">
+            <div class="container">
+                <h1 class="section-title">AI Tools Directory</h1>
+                <!-- Directory content will be loaded here -->
+            </div>
+        </div>
+
+        <div class="page" id="categories-page">
+            <div class="container">
+                <h1 class="section-title">AI Tools Categories</h1>
+                <!-- Categories content will be loaded here -->
+            </div>
+        </div>
+
+        <div class="page" id="courses-page">
+            <div class="container">
+                <h1 class="section-title">AI Courses</h1>
+                <!-- Courses content will be loaded here -->
+            </div>
+        </div>
+
+        <div class="page" id="create-ai-page">
+            <div class="container">
+                <h1 class="section-title">Create AI Tools</h1>
+                <!-- Create AI content will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Auth Pages -->
+        <div class="page" id="login-page">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <div class="auth-tabs">
+                        <div class="auth-tab active" data-tab="login">Login</div>
+                        <div class="auth-tab" data-tab="signup">Sign Up</div>
+                    </div>
+                    <div class="auth-form" id="login-form">
+                        <div class="form-group">
+                            <label for="login-email">Email Address</label>
+                            <input type="email" id="login-email" placeholder="Enter your email">
+                            <div class="form-error" id="login-email-error">Please enter a valid email address</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" placeholder="Enter your password">
+                            <div class="form-error" id="login-password-error">Password is required</div>
+                        </div>
+                        <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <input type="checkbox" id="remember-me">
+                                <label for="remember-me">Remember me</label>
+                            </div>
+                            <a href="#" style="font-size: 0.9rem;">Forgot password?</a>
+                        </div>
+                        <button class="btn" style="width: 100%; margin-top: 1rem;" id="login-submit">Login</button>
+                    </div>
+                    <div class="auth-form" id="signup-form" style="display: none;">
+                        <div class="form-divider">
+                            <div class="form-group">
+                                <label for="signup-fname">First Name</label>
+                                <input type="text" id="signup-fname" placeholder="Enter your first name">
+                                <div class="form-error" id="signup-fname-error">First name is required</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="signup-lname">Last Name</label>
+                                <input type="text" id="signup-lname" placeholder="Enter your last name">
+                                <div class="form-error" id="signup-lname-error">Last name is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email Address</label>
+                            <input type="email" id="signup-email" placeholder="Enter your email">
+                            <div class="form-error" id="signup-email-error">Please enter a valid email address</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" placeholder="Create a password">
+                            <div class="form-error" id="signup-password-error">Password must be at least 8 characters</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-confirm">Confirm Password</label>
+                            <input type="password" id="signup-confirm" placeholder="Confirm your password">
+                            <div class="form-error" id="signup-confirm-error">Passwords do not match</div>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" id="terms">
+                            <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                            <div class="form-error" id="terms-error">You must accept the terms and conditions</div>
+                        </div>
+                        <button class="btn" style="width: 100%; margin-top: 1rem;" id="signup-submit">Create Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="signup-page">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <div class="auth-tabs">
+                        <div class="auth-tab" data-tab="login">Login</div>
+                        <div class="auth-tab active" data-tab="signup">Sign Up</div>
+                    </div>
+                    <div class="auth-form" id="login-form-2" style="display: none;">
+                        <div class="form-group">
+                            <label for="login-email-2">Email Address</label>
+                            <input type="email" id="login-email-2" placeholder="Enter your email">
+                            <div class="form-error" id="login-email-error-2">Please enter a valid email address</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password-2">Password</label>
+                            <input type="password" id="login-password-2" placeholder="Enter your password">
+                            <div class="form-error" id="login-password-error-2">Password is required</div>
+                        </div>
+                        <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <input type="checkbox" id="remember-me-2">
+                                <label for="remember-me-2">Remember me</label>
+                            </div>
+                            <a href="#" style="font-size: 0.9rem;">Forgot password?</a>
+                        </div>
+                        <button class="btn" style="width: 100%; margin-top: 1rem;" id="login-submit-2">Login</button>
+                    </div>
+                    <div class="auth-form" id="signup-form-2">
+                        <div class="form-divider">
+                            <div class="form-group">
+                                <label for="signup-fname-2">First Name</label>
+                                <input type="text" id="signup-fname-2" placeholder="Enter your first name">
+                                <div class="form-error" id="signup-fname-error-2">First name is required</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="signup-lname-2">Last Name</label>
+                                <input type="text" id="signup-lname-2" placeholder="Enter your last name">
+                                <div class="form-error" id="signup-lname-error-2">Last name is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email-2">Email Address</label>
+                            <input type="email" id="signup-email-2" placeholder="Enter your email">
+                            <div class="form-error" id="signup-email-error-2">Please enter a valid email address</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password-2">Password</label>
+                            <input type="password" id="signup-password-2" placeholder="Create a password">
+                            <div class="form-error" id="signup-password-error-2">Password must be at least 8 characters</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-confirm-2">Confirm Password</label>
+                            <input type="password" id="signup-confirm-2" placeholder="Confirm your password">
+                            <div class="form-error" id="signup-confirm-error-2">Passwords do not match</div>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" id="terms-2">
+                            <label for="terms-2">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                            <div class="form-error" id="terms-error-2">You must accept the terms and conditions</div>
+                        </div>
+                        <button class="btn" style="width: 100%; margin-top: 1rem;" id="signup-submit-2">Create Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Pages -->
+        <div class="page" id="dashboard-page">
+            <div class="container">
+                <div class="dashboard">
+                    <div class="dashboard-sidebar">
+                        <h3>Dashboard</h3>
+                        <ul class="dashboard-menu">
+                            <li><a href="#" class="active" data-page="dashboard-overview"><i class="fas fa-tachometer-alt"></i> Overview</a></li>
+                            <li><a href="#" data-page="dashboard-profile"><i class="fas fa-user"></i> Profile</a></li>
+                            <li><a href="#" data-page="dashboard-favorites"><i class="fas fa-heart"></i> Favorites</a></li>
+                            <li><a href="#" data-page="dashboard-tools"><i class="fas fa-tools"></i> My Tools</a></li>
+                            <li><a href="#" data-page="dashboard-courses"><i class="fas fa-graduation-cap"></i> My Courses</a></li>
+                            <li><a href="#" data-page="dashboard-affiliate"><i class="fas fa-dollar-sign"></i> Affiliate Program</a></li>
+                            <li><a href="#" data-page="dashboard-settings"><i class="fas fa-cog"></i> Settings</a></li>
+                        </ul>
+                    </div>
+                    <div class="dashboard-content">
+                        <!-- Dashboard Overview -->
+                        <div class="dashboard-page active" id="dashboard-overview">
+                            <h2>Dashboard Overview</h2>
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <i class="fas fa-heart"></i>
+                                    <div class="stat-card-value">12</div>
+                                    <div class="stat-card-label">Favorites</div>
+                                </div>
+                                <div class="stat-card">
+                                    <i class="fas fa-tools"></i>
+                                    <div class="stat-card-value">5</div>
+                                    <div class="stat-card-label">Tools Added</div>
+                                </div>
+                                <div class="stat-card">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <div class="stat-card-value">3</div>
+                                    <div class="stat-card-label">Courses</div>
+                                </div>
+                                <div class="stat-card">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <div class="stat-card-value">$245</div>
+                                    <div class="stat-card-label">Earnings</div>
+                                </div>
+                            </div>
+                            <h3>Recent Activity</h3>
+                            <table class="dashboard-table">
+                                <thead>
+                                    <tr>
+                                        <th>Action</th>
+                                        <th>Item</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Added to favorites</td>
+                                        <td>ChatGPT Pro</td>
+                                        <td>2 hours ago</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Completed lesson</td>
+                                        <td>AI Fundamentals</td>
+                                        <td>1 day ago</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Posted review</td>
+                                        <td>Midjourney</td>
+                                        <td>2 days ago</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Referred a friend</td>
+                                        <td>Affiliate Program</td>
+                                        <td>3 days ago</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Dashboard Profile -->
+                        <div class="dashboard-page" id="dashboard-profile">
+                            <h2>Profile Settings</h2>
+                            <div class="form-card">
+                                <h3 class="form-title">Personal Information</h3>
+                                <div class="form-divider">
+                                    <div class="form-group">
+                                        <label for="profile-fname">First Name</label>
+                                        <input type="text" id="profile-fname" value="John">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="profile-lname">Last Name</label>
+                                        <input type="text" id="profile-lname" value="Doe">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="profile-email">Email Address</label>
+                                    <input type="email" id="profile-email" value="john.doe@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="profile-bio">Bio</label>
+                                    <textarea id="profile-bio" placeholder="Tell us about yourself...">AI enthusiast and developer with a passion for machine learning applications.</textarea>
+                                </div>
+                                <button class="btn">Save Changes</button>
+                            </div>
+                            <div class="form-card">
+                                <h3 class="form-title">Change Password</h3>
+                                <div class="form-group">
+                                    <label for="current-password">Current Password</label>
+                                    <input type="password" id="current-password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-password">New Password</label>
+                                    <input type="password" id="new-password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm-password">Confirm New Password</label>
+                                    <input type="password" id="confirm-password">
+                                </div>
+                                <button class="btn">Update Password</button>
+                            </div>
+                        </div>
+
+                        <!-- Other dashboard pages would be implemented similarly -->
+                        <div class="dashboard-page" id="dashboard-favorites">
+                            <h2>My Favorites</h2>
+                            <p>Your favorite AI tools will appear here.</p>
+                        </div>
+
+                        <div class="dashboard-page" id="dashboard-tools">
+                            <h2>My Tools</h2>
+                            <p>Tools you've added or manage will appear here.</p>
+                        </div>
+
+                        <div class="dashboard-page" id="dashboard-courses">
+                            <h2>My Courses</h2>
+                            <p>Your enrolled courses will appear here.</p>
+                        </div>
+
+                        <div class="dashboard-page" id="dashboard-affiliate">
+                            <h2>Affiliate Program</h2>
+                            <p>Your affiliate dashboard and statistics will appear here.</p>
+                        </div>
+
+                        <div class="dashboard-page" id="dashboard-settings">
+                            <h2>Account Settings</h2>
+                            <p>Your account settings and preferences will appear here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Neuravult</h3>
+                    <p>The premier directory for discovering and comparing AI tools to enhance your workflow.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#" data-page="home">Home</a></li>
+                        <li><a href="#" data-page="directory">AI Tools</a></li>
+                        <li><a href="#" data-page="categories">Categories</a></li>
+                        <li><a href="#" data-page="courses">Courses</a></li>
+                        <li><a href="#" data-page="compare">Comparison</a></li>
+                        <li><a href="#" data-page="pricing">Pricing</a></li>
+                        <li><a href="#" data-page="premium">Premium</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#" data-page="blog">Blog</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new tools and features.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Neuravult. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/2349161806424?text=Hello!%20I'm%20interested%20in%20Neuravult" class="whatsapp-float" target="_blank" id="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Tool Redirect Overlay -->
+    <div class="tool-redirect-overlay" id="tool-redirect-overlay">
+        <div class="tool-redirect-modal">
+            <h3>Leaving Neuravult</h3>
+            <p>You are now being redirected to the tool's official website. Neuravult is not responsible for content on external sites.</p>
+            <div class="tool-redirect-actions">
+                <button class="btn btn-outline" id="redirect-cancel">Cancel</button>
+                <button class="btn" id="redirect-confirm">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Assistant -->
+    <div class="ai-assistant">
+        <button class="ai-assistant-toggle">
+            <i class="fas fa-robot"></i>
+        </button>
+        <div class="ai-assistant-chat">
+            <div class="ai-chat-header">
+                <h4>AI Assistant</h4>
+                <button class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="ai-chat-body">
+                <div class="message ai">
+                    <div class="message-content">
+                        Hi there! I'm your AI assistant. How can I help you find the perfect AI tool today?
+                    </div>
+                </div>
+            </div>
+            <div class="ai-chat-footer">
+                <input type="text" class="ai-chat-input" placeholder="Ask me about AI tools...">
+                <button class="ai-chat-send"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container"></div>
+
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json" class="schema-markup">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Neuravult",
+        "url": "https://neuravult.com/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://neuravult.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <script>
+        // App Data and State Management
+        const AppState = {
+            currentUser: null,
+            isLoggedIn: false,
+            currentPage: 'home',
+            darkMode: false,
+            favorites: [],
+            tools: [],
+            categories: [],
+            filteredTools: [],
+            currentTool: null,
+            searchQuery: '',
+            filters: {
+                profession: 'all',
+                pricing: 'all',
+                category: 'all',
+                sort: 'popular'
+            },
+            testimonialIndex: 0,
+            affiliateId: null,
+            redirectUrl: null,
+            lastScrollPosition: 0,
+            isNavbarHidden: false
+        };
+
+        // DOM Elements
+        const DOM = {
+            body: document.body,
+            themeToggle: document.querySelector('.theme-toggle'),
+            mobileMenuBtn: document.querySelector('.mobile-menu-btn'),
+            mobileNav: document.querySelector('.mobile-nav'),
+            navMenu: document.querySelector('nav ul'),
+            userMenu: document.querySelector('.user-menu'),
+            userDropdown: document.querySelector('.user-dropdown'),
+            toolsGrid: document.querySelector('.tools-grid'),
+            loginBtn: document.getElementById('login-btn'),
+            signupBtn: document.getElementById('signup-btn'),
+            logoutBtn: document.getElementById('logout-btn'),
+            toastContainer: document.querySelector('.toast-container'),
+            testimonialPrev: document.getElementById('testimonial-prev'),
+            testimonialNext: document.getElementById('testimonial-next'),
+            testimonialsSlider: document.querySelector('.testimonials-slider'),
+            whatsappFloat: document.getElementById('whatsapp-float'),
+            viewMoreTools: document.getElementById('view-more-tools'),
+            viewAllCourses: document.getElementById('view-all-courses'),
+            premiumContact: document.getElementById('premium-contact'),
+            redirectOverlay: document.getElementById('tool-redirect-overlay'),
+            redirectCancel: document.getElementById('redirect-cancel'),
+            redirectConfirm: document.getElementById('redirect-confirm'),
+            aiAssistantToggle: document.querySelector('.ai-assistant-toggle'),
+            aiAssistantChat: document.querySelector('.ai-assistant-chat'),
+            aiChatInput: document.querySelector('.ai-chat-input'),
+            aiChatSend: document.querySelector('.ai-chat-send'),
+            searchInput: document.querySelector('.search-bar input'),
+            searchButton: document.querySelector('.search-bar button'),
+            filterSelects: document.querySelectorAll('.filter-options select'),
+            pages: document.querySelectorAll('.page'),
+            navLinks: document.querySelectorAll('nav a, .mobile-nav a, .footer-column a'),
+            authTabs: document.querySelectorAll('.auth-tab'),
+            dashboardMenuItems: document.querySelectorAll('.dashboard-menu a'),
+            scrollToTop: document.querySelector('.scroll-to-top'),
+            navProgress: document.querySelector('.nav-progress'),
+            pageTransition: document.querySelector('.page-transition')
+        };
+
+        // Simulated Data (in a real app, this would come from an API)
+        const toolsData = [
+            {
+                id: 1,
+                name: "ChatGPT Pro",
+                description: "Advanced AI chatbot for conversation, content creation, and problem solving.",
+                category: "Chatbots",
+                pricing: "Freemium",
+                rating: 4.9,
+                reviews: 1250,
+                tags: ["AI", "Chatbot", "Content", "Writing"],
+                featured: true,
+                image: "comment-dots",
+                website: "https://chat.openai.com/"
+            },
+            {
+                id: 2,
+                name: "Midjourney",
+                description: "AI-powered image generation from text descriptions with stunning results.",
+                category: "Image Generation",
+                pricing: "Paid",
+                rating: 4.8,
+                reviews: 980,
+                tags: ["AI", "Image", "Art", "Generation"],
+                featured: true,
+                image: "image",
+                website: "https://www.midjourney.com/"
+            },
+            {
+                id: 3,
+                name: "GitHub Copilot",
+                description: "AI pair programmer that helps you write better code faster.",
+                category: "Development",
+                pricing: "Paid",
+                rating: 4.7,
+                reviews: 875,
+                tags: ["AI", "Code", "Developer", "Programming"],
+                featured: true,
+                image: "code",
+                website: "https://github.com/features/copilot"
+            },
+            {
+                id: 4,
+                name: "Runway ML",
+                description: "Advanced video editing and generation powered by machine learning.",
+                category: "Video Editing",
+                pricing: "Freemium",
+                rating: 4.6,
+                reviews: 652,
+                tags: ["AI", "Video", "Editing", "Generation"],
+                featured: false,
+                image: "film",
+                website: "https://runwayml.com/"
+            },
+            {
+                id: 5,
+                name: "Descript",
+                description: "Edit audio and video by editing text with powerful AI features.",
+                category: "Audio Editing",
+                pricing: "Freemium",
+                rating: 4.5,
+                reviews: 521,
+                tags: ["AI", "Audio", "Video", "Editing"],
+                featured: false,
+                image: "music",
+                website: "https://www.descript.com/"
+            },
+            {
+                id: 6,
+                name: "Jasper AI",
+                description: "AI content creator for blogs, marketing copy, and more.",
+                category: "Content Creation",
+                pricing: "Paid",
+                rating: 4.4,
+                reviews: 487,
+                tags: ["AI", "Content", "Writing", "Marketing"],
+                featured: false,
+                image: "pen-fancy",
+                website: "https://www.jasper.ai/"
+            },
+            {
+                id: 7,
+                name: "Copy.ai",
+                description: "AI-powered copywriting tool for marketers and entrepreneurs.",
+                category: "Content Creation",
+                pricing: "Freemium",
+                rating: 4.3,
+                reviews: 412,
+                tags: ["AI", "Copywriting", "Marketing", "Content"],
+                featured: false,
+                image: "copy",
+                website: "https://www.copy.ai/"
+            },
+            {
+                id: 8,
+                name: "DALL-E 2",
+                description: "AI system that can create realistic images and art from natural language descriptions.",
+                category: "Image Generation",
+                pricing: "Paid",
+                rating: 4.7,
+                reviews: 763,
+                tags: ["AI", "Image", "Art", "Generation"],
+                featured: true,
+                image: "paint-brush",
+                website: "https://openai.com/product/dall-e-2"
+            }
+        ];
+
+        const categoriesData = [
+            { id: 1, name: "Content Creation", icon: "pen-fancy", count: 142 },
+            { id: 2, name: "Marketing", icon: "chart-line", count: 95 },
+            { id: 3, name: "Development", icon: "code", count: 78 },
+            { id: 4, name: "Image Generation", icon: "image", count: 64 },
+            { id: 5, name: "Video Editing", icon: "video", count: 48 },
+            { id: 6, name: "Chatbots", icon: "robot", count: 52 }
+        ];
+
+        // Initialize the Application
+        function initApp() {
+            // Load initial data
+            AppState.tools = [...toolsData];
+            AppState.categories = [...categoriesData];
+            AppState.filteredTools = [...toolsData];
+
+            // Render initial content
+            renderTools();
+            renderCategories();
+
+            // Initialize event listeners
+            initEventListeners();
+
+            // Check for saved user preferences
+            loadPreferences();
+
+            // Initialize animations
+            initAnimations();
+
+            // Initialize page navigation
+            navigateTo('home');
+
+            // Initialize performance optimizations
+            initPerformance();
+
+            // Initialize automation tools
+            initAutomation();
+
+            console.log('Neuravult application initialized successfully');
+        }
+
+        // Initialize Event Listeners
+        function initEventListeners() {
+            // Theme toggle
+            DOM.themeToggle.addEventListener('click', toggleTheme);
+
+            // Mobile menu
+            DOM.mobileMenuBtn.addEventListener('click', toggleMobileNav);
+
+            // User menu
+            const userAvatar = document.querySelector('.user-avatar');
+            if (userAvatar) {
+                userAvatar.addEventListener('click', toggleUserDropdown);
+            }
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!userAvatar.contains(e.target) && !DOM.userDropdown.contains(e.target)) {
+                    DOM.userDropdown.classList.remove('show');
+                }
+            });
+
+            // Navigation links
+            DOM.navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const page = link.getAttribute('data-page');
+                    if (page) {
+                        navigateTo(page);
+                    }
+                });
+            });
+
+            // Auth tabs
+            DOM.authTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const tabName = tab.getAttribute('data-tab');
+                    switchAuthTab(tabName);
+                });
+            });
+
+            // Dashboard menu
+            DOM.dashboardMenuItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const page = item.getAttribute('data-page');
+                    if (page) {
+                        switchDashboardPage(page);
+                    }
+                });
+            });
+
+            // Filter selects
+            DOM.filterSelects.forEach(select => {
+                select.addEventListener('change', (e) => {
+                    const filterType = e.target.parentElement.querySelector('h4').textContent.toLowerCase();
+                    const value = e.target.value;
+                    updateFilters(filterType, value);
+                });
+            });
+
+            // Search functionality
+            DOM.searchButton.addEventListener('click', handleSearch);
+            DOM.searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    handleSearch();
+                }
+            });
+
+            // Testimonial navigation
+            DOM.testimonialPrev.addEventListener('click', () => navigateTestimonials('prev'));
+            DOM.testimonialNext.addEventListener('click', () => navigateTestimonials('next'));
+
+            // Tool redirect
+            DOM.redirectCancel.addEventListener('click', () => {
+                DOM.redirectOverlay.classList.remove('active');
+            });
+
+            DOM.redirectConfirm.addEventListener('click', () => {
+                if (AppState.redirectUrl) {
+                    window.open(AppState.redirectUrl, '_blank');
+                    DOM.redirectOverlay.classList.remove('active');
+                }
+            });
+
+            // AI Assistant
+            DOM.aiAssistantToggle.addEventListener('click', toggleAIChat);
+            DOM.aiChatSend.addEventListener('click', sendAIMessage);
+            DOM.aiChatInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    sendAIMessage();
+                }
+            });
+
+            // Scroll to top
+            DOM.scrollToTop.addEventListener('click', scrollToTop);
+
+            // Window scroll events
+            window.addEventListener('scroll', handleScroll);
+
+            // Login/Logout buttons
+            if (DOM.loginBtn) {
+                DOM.loginBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    navigateTo('login');
+                });
+            }
+
+            if (DOM.signupBtn) {
+                DOM.signupBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    navigateTo('signup');
+                });
+            }
+
+            if (DOM.logoutBtn) {
+                DOM.logoutBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    handleLogout();
+                });
+            }
+
+            // View more buttons
+            if (DOM.viewMoreTools) {
+                DOM.viewMoreTools.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.open('https://neuravult-1.vercel.app/', '_blank');
+                });
+            }
+
+            if (DOM.viewAllCourses) {
+                DOM.viewAllCourses.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.open('https://neuravult-oibd.vercel.app/', '_blank');
+                });
+            }
+
+            // WhatsApp contact
+            if (DOM.premiumContact) {
+                DOM.premiumContact.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.open('https://wa.me/2349161886424?text=Hello!%20I\'m%20interested%20in%20Neuravult%20Premium%20services', '_blank');
+                });
+            }
+
+            // Lazy loading for images
+            if ('IntersectionObserver' in window) {
+                lazyLoadImages();
+            }
+
+            // Page visibility API for performance
+            document.addEventListener('visibilitychange', handleVisibilityChange);
+        }
+
+        // Navigation Functions
+        function navigateTo(page) {
+            // Show page transition animation
+            DOM.pageTransition.classList.add('active');
+
+            // Hide all pages
+            DOM.pages.forEach(p => p.classList.remove('active'));
+
+            // Show the requested page after a short delay
+            setTimeout(() => {
+                const targetPage = document.getElementById(`${page}-page`);
+                if (targetPage) {
+                    targetPage.classList.add('active');
+                    AppState.currentPage = page;
+
+                    // Update active nav link
+                    updateActiveNavLink(page);
+
+                    // Scroll to top
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                    // Hide mobile nav if open
+                    DOM.mobileNav.classList.remove('show');
+                } else {
+                    console.error(`Page ${page} not found`);
+                    // Fallback to home
+                    navigateTo('home');
+                }
+
+                // Hide page transition after a delay
+                setTimeout(() => {
+                    DOM.pageTransition.classList.remove('active');
+                }, 800);
+            }, 300);
+        }
+
+        function updateActiveNavLink(page) {
+            // Update main nav
+            DOM.navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-page') === page) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Update mobile nav
+            const mobileLinks = document.querySelectorAll('.mobile-nav a');
+            mobileLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-page') === page) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        function switchDashboardPage(page) {
+            // Hide all dashboard pages
+            document.querySelectorAll('.dashboard-page').forEach(p => p.classList.remove('active'));
+
+            // Show the requested page
+            const targetPage = document.getElementById(page);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+
+            // Update active menu item
+            DOM.dashboardMenuItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-page') === page) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        // UI Helper Functions
+        function toggleTheme() {
+            AppState.darkMode = !AppState.darkMode;
+            if (AppState.darkMode) {
+                DOM.body.classList.add('dark-mode');
+                DOM.themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                localStorage.setItem('darkMode', 'true');
+            } else {
+                DOM.body.classList.remove('dark-mode');
+                DOM.themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                localStorage.setItem('darkMode', 'false');
+            }
+        }
+
+        function toggleMobileNav() {
+            DOM.mobileNav.classList.toggle('show');
+        }
+
+        function toggleUserDropdown() {
+            DOM.userDropdown.classList.toggle('show');
+        }
+
+        function switchAuthTab(tabName) {
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
+            const loginForm2 = document.getElementById('login-form-2');
+            const signupForm2 = document.getElementById('signup-form-2');
+            const tabs = document.querySelectorAll('.auth-tab');
+
+            tabs.forEach(tab => {
+                if (tab.getAttribute('data-tab') === tabName) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+
+            if (tabName === 'login') {
+                if (loginForm) loginForm.style.display = 'block';
+                if (signupForm) signupForm.style.display = 'none';
+                if (loginForm2) loginForm2.style.display = 'block';
+                if (signupForm2) signupForm2.style.display = 'none';
+            } else {
+                if (loginForm) loginForm.style.display = 'none';
+                if (signupForm) signupForm.style.display = 'block';
+                if (loginForm2) loginForm2.style.display = 'none';
+                if (signupForm2) signupForm2.style.display = 'block';
+            }
+        }
+
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.innerHTML = `
+                <i class="fas fa-${getToastIcon(type)}"></i>
+                <span>${message}</span>
+                <button class="toast-close"><i class="fas fa-times"></i></button>
+            `;
+
+            DOM.toastContainer.appendChild(toast);
+
+            // Show toast
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 100);
+
+            // Add close event
+            const closeBtn = toast.querySelector('.toast-close');
+            closeBtn.addEventListener('click', () => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    DOM.toastContainer.removeChild(toast);
+                }, 300);
+            });
+
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                if (toast.parentNode) {
+                    toast.classList.remove('show');
+                    setTimeout(() => {
+                        if (toast.parentNode) {
+                            DOM.toastContainer.removeChild(toast);
+                        }
+                    }, 300);
+                }
+            }, 5000);
+        }
+
+        function getToastIcon(type) {
+            switch (type) {
+                case 'success': return 'check-circle';
+                case 'error': return 'exclamation-circle';
+                case 'warning': return 'exclamation-triangle';
+                default: return 'info-circle';
+            }
+        }
+
+        // Data Handling Functions
+        function renderTools() {
+            if (!DOM.toolsGrid) return;
+
+            DOM.toolsGrid.innerHTML = '';
+
+            AppState.filteredTools.forEach(tool => {
+                const toolCard = document.createElement('div');
+                toolCard.className = 'tool-card animate__animated animate__fadeInUp';
+                toolCard.innerHTML = `
+                    ${tool.featured ? '<span class="tool-badge">Featured</span>' : ''}
+                    <div class="tool-image">
+                        <i class="fas fa-${tool.image}"></i>
+                    </div>
+                    <div class="tool-content">
+                        <div class="tool-title">
+                            <h3>${tool.name}</h3>
+                            <button class="tool-favorite" data-id="${tool.id}">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <p class="tool-description">${tool.description}</p>
+                        <div class="tool-meta">
+                            <span class="tool-price">${tool.pricing}</span>
+                            <span class="tool-rating">
+                                <i class="fas fa-star"></i> ${tool.rating} (${tool.reviews})
+                            </span>
+                        </div>
+                        <div class="tool-tags">
+                            ${tool.tags.map(tag => `<span class="tool-tag">${tag}</span>`).join('')}
+                        </div>
+                        <button class="btn btn-sm" data-id="${tool.id}" data-url="${tool.website}">View Details</button>
+                    </div>
+                `;
+                DOM.toolsGrid.appendChild(toolCard);
+            });
+
+            // Add event listeners to the new tool cards
+            document.querySelectorAll('.tool-favorite').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const toolId = parseInt(btn.getAttribute('data-id'));
+                    toggleFavorite(toolId, btn);
+                });
+            });
+
+            document.querySelectorAll('.tool-card .btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const toolId = parseInt(btn.getAttribute('data-id'));
+                    const toolUrl = btn.getAttribute('data-url');
+                    showToolRedirect(toolUrl);
+                });
+            });
+
+            document.querySelectorAll('.tool-card').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    if (!e.target.closest('.tool-favorite') && !e.target.closest('.btn')) {
+                        const toolId = parseInt(card.querySelector('.tool-favorite').getAttribute('data-id'));
+                        const tool = AppState.tools.find(t => t.id === toolId);
+                        if (tool) {
+                            showToolDetails(tool);
+                        }
+                    }
+                });
+            });
+        }
+
+        function renderCategories() {
+            const categoriesContainer = document.querySelector('.categories');
+            if (!categoriesContainer) return;
+
+            categoriesContainer.innerHTML = '';
+
+            AppState.categories.forEach(category => {
+                const categoryCard = document.createElement('div');
+                categoryCard.className = 'category-card animate__animated animate__fadeInUp';
+                categoryCard.innerHTML = `
+                    <i class="fas fa-${category.icon}"></i>
+                    <h3>${category.name}</h3>
+                    <p>${category.count} tools</p>
+                `;
+                categoriesContainer.appendChild(categoryCard);
+            });
+        }
+
+        function toggleFavorite(toolId, button) {
+            const index = AppState.favorites.indexOf(toolId);
+            const icon = button.querySelector('i');
+
+            if (index === -1) {
+                // Add to favorites
+                AppState.favorites.push(toolId);
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+                showToast('Added to favorites', 'success');
+            } else {
+                // Remove from favorites
+                AppState.favorites.splice(index, 1);
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+                showToast('Removed from favorites', 'info');
+            }
+
+            // Save to localStorage
+            localStorage.setItem('favorites', JSON.stringify(AppState.favorites));
+        }
+
+        function updateFilters(filterType, value) {
+            AppState.filters[filterType] = value;
+
+            // Apply filters
+            AppState.filteredTools = AppState.tools.filter(tool => {
+                // Profession filter
+                if (AppState.filters.profession !== 'all') {
+                    // This would be more specific in a real app
+                    if (AppState.filters.profession === 'developer' && tool.category !== 'Development') {
+                        return false;
+                    }
+                    if (AppState.filters.profession === 'marketer' && !['Content Creation', 'Marketing'].includes(tool.category)) {
+                        return false;
+                    }
+                    if (AppState.filters.profession === 'designer' && !['Image Generation', 'Video Editing'].includes(tool.category)) {
+                        return false;
+                    }
+                    if (AppState.filters.profession === 'writer' && tool.category !== 'Content Creation') {
+                        return false;
+                    }
+                }
+
+                // Pricing filter
+                if (AppState.filters.pricing !== 'all') {
+                    if (AppState.filters.pricing === 'free' && tool.pricing !== 'Free') {
+                        return false;
+                    }
+                    if (AppState.filters.pricing === 'freemium' && tool.pricing !== 'Freemium') {
+                        return false;
+                    }
+                    if (AppState.filters.pricing === 'paid' && tool.pricing !== 'Paid') {
+                        return false;
+                    }
+                }
+
+                // Category filter
+                if (AppState.filters.category !== 'all' && tool.category !== AppState.filters.category) {
+                    return false;
+                }
+
+                return true;
+            });
+
+            // Apply sorting
+            switch (AppState.filters.sort) {
+                case 'popular':
+                    AppState.filteredTools.sort((a, b) => b.reviews - a.reviews);
+                    break;
+                case 'rating':
+                    AppState.filteredTools.sort((a, b) => b.rating - a.rating);
+                    break;
+                case 'newest':
+                    // Assuming newer tools have higher IDs
+                    AppState.filteredTools.sort((a, b) => b.id - a.id);
+                    break;
+            }
+
+            // Re-render tools
+            renderTools();
+        }
+
+        function handleSearch() {
+            const query = DOM.searchInput.value.trim().toLowerCase();
+            AppState.searchQuery = query;
+
+            if (query) {
+                AppState.filteredTools = AppState.tools.filter(tool => {
+                    return tool.name.toLowerCase().includes(query) ||
+                           tool.description.toLowerCase().includes(query) ||
+                           tool.category.toLowerCase().includes(query) ||
+                           tool.tags.some(tag => tag.toLowerCase().includes(query));
+                });
+            } else {
+                AppState.filteredTools = [...AppState.tools];
+            }
+
+            renderTools();
+            showToast(`Found ${AppState.filteredTools.length} tools for "${query}"`, 'info');
+        }
+
+        function showToolDetails(tool) {
+            // In a real app, this would open a modal or navigate to a details page
+            console.log('Showing details for:', tool.name);
+            // For now, just show the redirect overlay
+            showToolRedirect(tool.website);
+        }
+
+        function showToolRedirect(url) {
+            AppState.redirectUrl = url;
+            DOM.redirectOverlay.classList.add('active');
+        }
+
+        function navigateTestimonials(direction) {
+            const testimonials = document.querySelectorAll('.testimonial');
+            const testimonialWidth = testimonials[0].offsetWidth + 32; // width + margin
+
+            if (direction === 'next') {
+                AppState.testimonialIndex = (AppState.testimonialIndex + 1) % testimonials.length;
+            } else {
+                AppState.testimonialIndex = (AppState.testimonialIndex - 1 + testimonials.length) % testimonials.length;
+            }
+
+            DOM.testimonialsSlider.scrollTo({
+                left: AppState.testimonialIndex * testimonialWidth,
+                behavior: 'smooth'
+            });
+        }
+
+        function toggleAIChat() {
+            DOM.aiAssistantChat.classList.toggle('active');
+        }
+
+        function sendAIMessage() {
+            const message = DOM.aiChatInput.value.trim();
+            if (!message) return;
+
+            // Add user message
+            const userMessage = document.createElement('div');
+            userMessage.className = 'message user';
+            userMessage.innerHTML = `<div class="message-content">${message}</div>`;
+            DOM.aiChatInput.value = '';
+
+            // Add to chat
+            const aiChatBody = document.querySelector('.ai-chat-body');
+            aiChatBody.appendChild(userMessage);
+
+            // Simulate AI response after a short delay
+            setTimeout(() => {
+                // Add AI message
+                const aiMessage = document.createElement('div');
+                aiMessage.className = 'message ai';
+                aiMessage.innerHTML = `<div class="message-content">${getAIResponse(message)}</div>`;
+                aiChatBody.appendChild(aiMessage);
+
+                // Scroll to bottom
+                aiChatBody.scrollTop = aiChatBody.scrollHeight;
+            }, 1000);
+
+            // Scroll to bottom
+            aiChatBody.scrollTop = aiChatBody.scrollHeight;
+        }
+
+        function getAIResponse(message) {
+            // Simple response logic - in a real app, this would connect to an AI API
+            const lowerMessage = message.toLowerCase();
+
+            if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
+                return "Hello! How can I help you find the perfect AI tool today?";
+            } else if (lowerMessage.includes('content') || lowerMessage.includes('writing')) {
+                return "For content creation, I recommend checking out tools like ChatGPT, Jasper AI, or Copy.ai. They're great for generating written content.";
+            } else if (lowerMessage.includes('image') || lowerMessage.includes('art')) {
+                return "For image generation, Midjourney and DALL-E 2 are the top choices. They can create stunning visuals from text descriptions.";
+            } else if (lowerMessage.includes('video') || lowerMessage.includes('edit')) {
+                return "For video editing, Runway ML offers powerful AI-powered video editing capabilities. Descript is also great for editing videos through text.";
+            } else if (lowerMessage.includes('code') || lowerMessage.includes('developer')) {
+                return "For developers, GitHub Copilot is an excellent AI pair programmer that helps you write code faster and more efficiently.";
+            } else if (lowerMessage.includes('price') || lowerMessage.includes('cost')) {
+                return "Pricing varies by tool. Many offer free tiers or trials. Would you like me to help you find tools within a specific budget?";
+            } else {
+                return "I'm here to help you find the perfect AI tools for your needs. You can ask me about content creation, image generation, video editing, coding tools, or anything else related to AI tools!";
+            }
+        }
+
+        function handleLogout() {
+            AppState.isLoggedIn = false;
+            AppState.currentUser = null;
+            showToast('Logged out successfully', 'info');
+            navigateTo('home');
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        function handleScroll() {
+            // Show/hide scroll to top button
+            if (window.scrollY > 300) {
+                DOM.scrollToTop.classList.add('visible');
+            } else {
+                DOM.scrollToTop.classList.remove('visible');
+            }
+
+            // Update progress bar
+            const winHeight = window.innerHeight;
+            const docHeight = document.documentElement.scrollHeight;
+            const scrollPos = window.scrollY;
+            const progress = (scrollPos / (docHeight - winHeight)) * 100;
+            DOM.navProgress.style.width = `${progress}%`;
+
+            // Hide/show header on scroll
+            const currentScrollPos = window.pageYOffset;
+            
+            if (currentScrollPos > AppState.lastScrollPosition && currentScrollPos > 100) {
+                // Scrolling down
+                if (!AppState.isNavbarHidden) {
+                    document.querySelector('header').classList.add('hidden');
+                    AppState.isNavbarHidden = true;
+                }
+            } else {
+                // Scrolling up
+                if (AppState.isNavbarHidden) {
+                    document.querySelector('header').classList.remove('hidden');
+                    AppState.isNavbarHidden = false;
+                }
+            }
+            
+            // Add shadow to header when scrolled
+            if (currentScrollPos > 50) {
+                document.querySelector('header').classList.add('header-scrolled');
+            } else {
+                document.querySelector('header').classList.remove('header-scrolled');
+            }
+            
+            AppState.lastScrollPosition = currentScrollPos;
+        }
+
+        function handleVisibilityChange() {
+            if (document.hidden) {
+                // Page is hidden, pause unnecessary operations
+                console.log('Page is hidden, optimizing performance');
+            } else {
+                // Page is visible, resume operations
+                console.log('Page is visible');
+            }
+        }
+
+        // Performance and Optimization Functions
+        function initPerformance() {
+            // Lazy loading for images
+            if ('IntersectionObserver' in window) {
+                const lazyImages = document.querySelectorAll('img[data-src]');
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy-load');
+                            img.classList.add('loaded');
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(img => {
+                    imageObserver.observe(img);
+                });
+            }
+
+            // Preload critical resources
+            preloadResources();
+        }
+
+        function preloadResources() {
+            // Preload critical CSS, JS, or fonts here
+            const resources = [
+                'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
+                'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap'
+            ];
+
+            resources.forEach(resource => {
+                const link = document.createElement('link');
+                link.rel = 'preload';
+                link.href = resource;
+                link.as = 'style';
+                document.head.appendChild(link);
+            });
+        }
+
+        function lazyLoadImages() {
+            const lazyImages = document.querySelectorAll('img[data-src]');
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy-load');
+                        img.classList.add('loaded');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Automation and Script Connections
+        function initAutomation() {
+            // Initialize analytics
+            initAnalytics();
+
+            // Initialize error tracking
+            initErrorTracking();
+
+            // Initialize performance monitoring
+            initPerformanceMonitoring();
+
+            // Initialize automation scripts
+            initAutomationScripts();
+        }
+
+        function initAnalytics() {
+            // In a real app, this would initialize Google Analytics, Facebook Pixel, etc.
+            console.log('Analytics initialized');
+        }
+
+        function initErrorTracking() {
+            // In a real app, this would initialize error tracking services like Sentry
+            window.addEventListener('error', (e) => {
+                console.error('Error occurred:', e.error);
+                // Send to error tracking service
+            });
+        }
+
+        function initPerformanceMonitoring() {
+            // Monitor Core Web Vitals
+            if ('PerformanceObserver' in window) {
+                const observer = new PerformanceObserver((list) => {
+                    for (const entry of list.getEntries()) {
+                        console.log(`${entry.name}: ${entry.value}`);
+                    }
+                });
+
+                observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input'] });
+            }
+        }
+
+        function initAutomationScripts() {
+            // Initialize any automation scripts here
+            console.log('Automation scripts initialized');
+        }
+
+        // Animation Functions
+        function initAnimations() {
+            // Initialize scroll animations
+            initScrollAnimations();
+
+            // Initialize hover animations
+            initHoverAnimations();
+
+            // Initialize page transition animations
+            initPageTransitions();
+        }
+
+        function initScrollAnimations() {
+            const animatedElements = document.querySelectorAll('.animate__animated');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const animation = entry.target.getAttribute('data-animation') || 'fadeInUp';
+                        entry.target.classList.add(animation);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        function initHoverAnimations() {
+            // Add hover animations to interactive elements
+            const interactiveElements = document.querySelectorAll('.btn, .card, .tool-card, .category-card');
+
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    el.classList.add('animate__pulse');
+                });
+
+                el.addEventListener('mouseleave', () => {
+                    el.classList.remove('animate__pulse');
+                });
+            });
+        }
+
+        function initPageTransitions() {
+            // Page transition animations are handled in the navigateTo function
+        }
+
+        // Utility Functions
+        function loadPreferences() {
+            // Load dark mode preference
+            const darkMode = localStorage.getItem('darkMode');
+            if (darkMode === 'true') {
+                AppState.darkMode = true;
+                DOM.body.classList.add('dark-mode');
+                DOM.themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+
+            // Load favorites
+            const favorites = localStorage.getItem('favorites');
+            if (favorites) {
+                AppState.favorites = JSON.parse(favorites);
+            }
+
+            // Load user session if exists
+            const user = localStorage.getItem('user');
+            if (user) {
+                AppState.currentUser = JSON.parse(user);
+                AppState.isLoggedIn = true;
+            }
+        }
+
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        function throttle(func, limit) {
+            let inThrottle;
+            return function() {
+                const args = arguments;
+                const context = this;
+                if (!inThrottle) {
+                    func.apply(context, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            };
+        }
+
+        // Initialize the app when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initApp);
+
+        // Register service worker for PWA functionality
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch((registrationError) => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>
